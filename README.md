@@ -4,6 +4,7 @@ This repository contains notebooks for some of the academic courses, I might as 
 
 ## Microprocessor
 All the assembly programs require an NASM package 
+
 MacOS Users, run the below command in your terminal 
 - For intel syntax
 ```
