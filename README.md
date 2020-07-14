@@ -11,7 +11,8 @@ MacOS Users, run the below command in your terminal
 nasm -elf file.asm
 ```
 - For the  GAS/UNIX/AT&T syntax
-```gcc file.asm
+```
+gcc file.asm
 ld file.o -o file
 ./file
 ```
