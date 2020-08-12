@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\title{Regular Expressions}
+\author{Problems}
+\date{11/10/2020}
+
+\begin{document}
+\maketitle
+
+
+\begin{enumerate}
+  \item Using a regular expression, represent the language defined over input alphabet $\sigma \in \{0,1,2\}$ such that every string from the language contains any number of $0$'s, followed by any number of $1$'s, followed by any number of $2$'s 
+  
+  {Solution}:
+  \begin{align*}
+  L1 &= 0^m \\
+  L2 &= 1^n \\
+  L3 &= 2^l \\
+  L4 &= L1 . L2 . L3 = \{ 0^m . 1^n . 2^l ~| ~n,m,l \geq 0 \} \\
+  \text{Regular Expression} &= 0^*.1^*.2^*
+  \end{align*}
+  
+  
+  \item Using a regular expression, represent the language defined over input alphabet $\sigma \in \{0,1,2\}$ such that every string from the language contains at least one $0$, followed by at least one $1$, followed by at least one $2$.
+  
+  Solution:
+  \begin{align*}
+  L1 &= 0^m \\
+  L2 &= 1^n \\ 
+  L3 &= 2^l \\
+  L4 &= L1 . L2 . L3= \{0^m . 1^n . 2^l ~|~ n,m,l \geq 1 \} \\
+  \text{Regular Expression} &= 0+.1+.2+
+  \end{align*} \\
+  
+  \item Design a regular expression for all strings starting with $a$'s with any number of $b$'s in between 
+  
+  Solution:
+  \begin{align*}
+  L1 &= a^m\\
+  L2 &= b^n\\
+  L3 &= a^l\\
+  L4 &= L1 . L2 . L3= \{a^m . b^n . a^l ~|~ m,l =1 , n \geq 0\}\\
+  \text{Regular Expression} &= a.b^*.a
+  \end{align*}
+
+  \item Design Regular expression for a language that contains all the strings that end with $011$
+  
+  Solution:
+  \begin{align*}
+  \text{Regular Expression} &= (0+1)^*.011
+  \end{align*}
+  
+  
+  \item Describe the language represented by the regular expression \\ RE = (1+10)^*
+
+  Solution:
+  \begin{align*}
+  L&= \{\epsilon,110,11110,1101010101010,110,11110101010101010, \dots \}
+  \end{align*}
+  
+  \item Design a regular expression for language that contains all possible combinatinos of $0$'s and $1$'s but doesn't have have consecutive $0$'s
+  
+  Solution:
+  \begin{align*}
+  \text{Regular Expression} &= (0+\epsilon).(1+10)^* 
+  \end{align*}
+  
+  
+  \item If the language is L(r) = \{a,c,ab,cb,abb,cbb,abbbb,..\} what is the Regular Expression?
+  
+  Solution:
+  \begin{align*}
+  \text{Regular Expression} &= (a+c).b^*
+  \end{align*}
+  
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\iffalse
+
+\begin{itemize}
+
+  \item Transmission time / delay = \dfrac{\text{Length of Data Packet}}{\text{Bandwidth of Network}} = \dfrac{length}{BW}
+  
+  \item Propagation time / delay = \dfrac{\text{Distance between sender and receiver}}{\text{Transmission Speed}} 
+  
+  \item In a fiber optic network, transmission speed of data packet is $2.1 \times 10^8 \text{ ms}^{-1}$, but actually the signal can travel with 70\% speed of light.
+  
+  
+  \item Stoptime wait protocol: You send the packet and when you send it, the packet goes to receiver and receiver sends an acknowledgement. It should go within the time limit. If not, it resends. Packets are stored in reciever's buffer,  this forms a queue.
+  \begin{align*}
+   \text{TT to send packet} &= \left(\text{Transmission Time} + \text{Propagation Time}\\ &+\text{Queuing Time} + \text{Processing Time} \right) \\
+   &= TT + TP + QT + PT\\
+   \text{TT to get acknowledgement} &= \left(\text{Transmission Time} + \text{Propagation Time}\\ &+\text{Queuing Time} + \text{Processing Time} \right) \\
+   &= TT + TP + QT + PT
+  \end{align*}
+  
+  \item Efficiency
+  \begin{align*}
+  &\bullet{} ~ \text{Total time} = \text{Useful time} + \text{Useless time}\\
+  &\bullet{} ~ \text{Uselful time} = \text{Transmission Time (of packet)} \\
+  &\bullet{} ~ \text{Useless time} = 2 \times \text{Propagation Time}
+  \end{align*}
+  \begin{align*}
+  \bullet{} ~ \text{Efficiency }(n) &= \dfrac{\text{Useful time}}{\text{Total time}} \\ \\
+  &= \dfrac{\text{Useful time}}{\text{Useful time}+ \text{Useless time}} \\ \\
+  &= \dfrac{\text{Transmission time of packet}}{\text{Transmission Time}+2\times \text{Propagation Time}} \\ 
+  %\text{Dividing throughout} & \text{ by transmission time}\\
+  &= \dfrac{1}{1+2\times \dfrac{\text{Propagation time}}{\text{Transmission Time}}} \\
+  &= \dfrac{1}{1+2A}
+  \end{align*}
+
+
+  \item Throughput: The number of bits that can be sent through the channel. 
+  \begin{align*}
+  &1. \text{Throughput} = \text{efficiency}(n) \times \text{bandwidth} \\ 
+  &2. \text{Round Trip Time} = 2 \times \text{Propagation Time}
+  \end{align*}
+  
+   \item Conversions
+  \begin{align*}
+  &\bullet{} ~1 \text{ byte} = 8 ~\text{bits}\\
+  &\bullet{} ~ \text{In terms of Data},\\
+  &- 1K = 1024 ~\text{bits}\\
+  &- 1Mb = 1024^2 ~\text{bits}\\
+  &- 1Gb = 1024^3 ~ \text{bits}\\
+  &\bullet{} ~ \text{In terms of Speed,}\\
+  &- 1K = 10^3 ~ \text{bits}\\
+  &- 1Mb = 10^6 ~ \text{bits}\\
+  &- 1Gb = 10^9 ~ \text{bits}
+  \end{align*}
+
+\end{itemize}
+
+
+\item \dfrac{\text{}}{\text{}}
+Problems 
+Problem 1.
+Calculate transmission time, if, 
+Length of data packet =1000bits
+Bandwidth of the network = 1kbps
+Solution
+Tt = L/b = 1000bits / 1kbps = 1000bits/ 1000 bits per second = 1 second
+Problem 2. 
+Length = 1Kb, BW = 1kbps
+Calculate transmission time
+Tt = l/b = 1024/ 1000 = 1.024 seconds 
+Problem 3. 
+Calculate the propagation time.
+Distance = 2.1 km, vel = 2.1 x 10^8 m/s 
+PT = d sender n received / velocity  = 2.1*10^3/2.1*10^8  = 10^-5
+\fi
+\end{document}
