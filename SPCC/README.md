@@ -3,7 +3,7 @@
 
 To run the lexical analyzer, paste the following commands in your terminal
 ```
-$ cd SPCC
+$ cd LexicalAnalyzer
 $ python3 lexicalAnalyzer.py
 ```
 
