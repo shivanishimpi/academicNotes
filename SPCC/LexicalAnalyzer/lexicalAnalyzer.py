@@ -69,8 +69,8 @@ def skipcomment():
 
 
 
-
-a=input("Enter the file name:")
+import glob
+a = (glob.glob('*.c')[0])
 s=open(a,"r")
 str1=s.read()
 word_list1=str1.split()
