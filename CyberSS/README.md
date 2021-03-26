@@ -1,7 +1,11 @@
 ## CyberSS
 
+`Algorithms covered`:
 
-To run the algorithms
+- DeffieHelman
+
+
+To run the programs
 
 ```
 $ cd <directoryname>
