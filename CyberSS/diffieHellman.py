@@ -1,7 +1,7 @@
 def tempFunc(x,y,z):
     return (x**y)%z
 
-def deffieHelman(P,G,a,b):
+def diffieHellman(P,G,a,b):
     x = int(tempFunc(G,a,P)) 
     y = int(tempFunc(G,b,P)) 
     ka = int(tempFunc(y,a,P))
@@ -12,4 +12,4 @@ def deffieHelman(P,G,a,b):
 privKey1 = 4
 privKey2 = 3
 
-print(f'Secret Keys for privateKeys ({privKey1},{privKey2}) = {deffieHelman(23,9,privKey1,privKey2)}')
+print(f'Secret Keys for privateKeys ({privKey1},{privKey2}) = {diffieHellman(23,9,privKey1,privKey2)}')
