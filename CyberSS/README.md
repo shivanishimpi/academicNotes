@@ -2,7 +2,7 @@
 
 `Algorithms covered`:
 
-- DeffieHelman
+- DiffieHellman
 
 
 To run the programs
