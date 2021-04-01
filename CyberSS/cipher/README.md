@@ -2,10 +2,10 @@
 
 `Algorithms covered`:
 
-- autokey Cipher
+- autokeyCipher
+- ceaserCipher
 
 To run the programs
-
 ```
 $ python3 <filename>.py
 ```
