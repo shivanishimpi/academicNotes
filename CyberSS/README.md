@@ -3,7 +3,10 @@
 `Algorithms covered`:
 
 - DiffieHellman
-
+- RSA
+- cipher
+   - ceaserCipher
+   - autokeyCipher
 
 To run the programs
 
